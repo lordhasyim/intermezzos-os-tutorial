@@ -1,0 +1,28 @@
+[package]
+name = "intermezzos"
+version = "0.1.0"
+authors = ["Hasyim <lordhasyim@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package.metadata.bootimage]
+default-target = "intermezzos.json"
+
+[workspace]
+
+[dependencies]
+bootloader = "0.6.4"
+
+# [dependencies.vga]
+# path = "vga"
+
+[[bin]]
+name = "intermezzos"
+test = false
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
